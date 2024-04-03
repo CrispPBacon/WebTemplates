@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        hsl(230deg 16% 15%) 0%,
+        hsl(230deg 16% 15%) 8%,
+        hsl(230deg 16% 15%) 17%,
+        hsl(230deg 16% 15%) 25%,
+        hsl(230deg 16% 15%) 33%,
+        hsl(230deg 16% 15%) 42%,
+        hsl(230deg 16% 15%) 50%,
+        hsl(231deg 24% 17%) 58%,
+        hsl(233deg 31% 18%) 67%,
+        hsl(235deg 35% 20%) 75%,
+        hsl(235deg 36% 20%) 83%,
+        hsl(235deg 36% 20%) 92%,
+        hsl(235deg 36% 20%) 100%
+    ) no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+input:focus{outline: none;}
+input {font-family: 'Roboto', sans-serif; font-size: .8rem;}
+span, #newMessageLabel { font-size: .7rem; }
+
+img { width: 2rem;}

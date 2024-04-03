@@ -1,0 +1,417 @@
+/* GENERAL DESIGN */
+.webchat {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+/* COMPONENTS */
+.components {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.webchat  .components  .component-left {
+    width: 29%;
+    background-color: #1b1c21;
+    border: 2px solid #2c3146;
+    border-radius: 5px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.webchat  .components  .component-middle {
+    width: 52%;
+}
+.webchat  .components  .component-right {
+    border-left: 1px solid #707070;
+    width: 20%;
+    background-color: transparen;
+    border: 2px solid #2c3146;
+    border-radius: 5px;
+}.component-right .header {
+    height: 30%;
+    background-color: #222431;
+}.component-right .content {
+    height: 70%;
+    background-color: #171928;
+}
+
+
+
+
+/* ===============COMPONENTS' CONTENT=============== */
+
+
+/* LEFT COMPONENT */
+/* LEFT COMPONENT */
+/* LEFT COMPONENT */
+
+.component-left .header {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+}.header .logo { margin: 1rem 0 0 .5rem; }
+ span.search-bar { 
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    color: black; 
+} span.search-bar input {
+    border: none;
+    border-radius: 20px;
+    padding: .8rem 2rem .8rem 2.5rem;
+    margin: 1rem 0;
+    width: 100%;
+    background-color: #23242a;
+    color: white;
+} span.search-bar ion-icon {
+    position: absolute;
+    font-size: 1.4rem;
+} span.search-bar #search-clear {
+    right: .5rem;
+    color: #808080;
+    border-radius: 100px;
+    border: 1px solid #303030;
+    background-color: #303030;
+    visibility: hidden;
+    cursor: pointer;
+} span.search-bar #search-btn {
+    color: #808080;
+    left: 1rem;
+    font-size: 1rem;
+} span.search-bar input::-webkit-search-cancel-button {z-index: -1;}
+span.search-bar input:not(:placeholder-shown) + #search-clear  {visibility: visible;}
+
+span#newMessage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}span#newMessage:hover { background-color: #1e232e; }
+#newMessageLabel {letter-spacing:2px; font-size: .8rem; font-weight: 300;}
+span#newMessage ion-icon {
+    font-size: .25rem;
+    color: #6b3542;
+    border: 2px solid #a64557;
+    border-radius: 100px;
+    margin-left: 5px;
+}span#newMessageCount {
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    background-color: #1e232e;
+    color: #3d7ac7;
+    font-weight: 400;
+}
+
+
+/* LIST OF PROFILES CONVO LIST */
+.component-left .conversation-list {
+    max-height: 44%;
+    overflow-y: auto;
+    flex-shrink: 0;
+}.profile {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    cursor: pointer;
+}.profile:hover { background-color: rgba(255, 255, 255, 0.1);}
+.profile span { 
+    font-size: 2rem; 
+    display: flex
+}.profile span img {
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+}.profile .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    padding: 0 .8rem;
+}.profile .profile-details h1 { font-size: .8rem; font-weight: 400; color: #dddddd; }
+.profile .profile-details p { font-size: .6rem; font-weight: 300; color: #707070;}
+.profile .profile-details span { 
+    font-size: .6rem;
+    position: absolute;
+    right: 1rem;
+    color: #707070;
+    font-weight: 400;
+}
+
+.profile-details span.add-icon-logo, .add-icon-logo {
+    background-color: #202939;
+    color: #3e85e3;
+    border-radius: 100px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: .5rem;
+    cursor: pointer;
+}
+
+.profile .profile-details span add-icon, span add-icon { 
+    font-size: 1.3rem;
+    z-index: 1;
+    font-weight: 400;
+}.profile-details span.add-icon-logo:active { animation: shrink 0.05s forwards; }
+
+/* PEOPLE YOU MAY KNOW */
+.component-left .footer {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}.component-left .footer .people-you-may-know {
+    overflow-y: auto;
+}.component-left .footer > span {
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+}.component-left .footer span h1 {
+    padding: .5rem 0;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.9);
+    }
+}
+
+/* ================================================================= */
+
+/* MIDDLE COMPONENT */
+/* MIDDLE COMPONENT */
+/* MIDDLE COMPONENT */
+
+.component-middle {
+    position: relative;
+    /* background-color: red; */
+}
+
+.component-middle .conversation-header {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 0 2rem;
+}.conversation-header .conversation-head {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid #2c3146;
+    font-weight: 200;
+    position: relative;
+}.conversation-head.single h1, .group h1 { font-weight: bold; font-size: .9rem; letter-spacing: .05rem; }
+.single .members { visibility: hidden; position: absolute; }
+
+.group { justify-content: center; }
+.group > .profile-pic { 
+     position: absolute;
+     left: 0;
+     display: flex;
+}
+
+.group .members {
+    position: absolute;
+    left: 3rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+.members .profile-pic { margin-left: -1rem;}
+.members .profile-others-count {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-color: #3e85e3;
+    color: black; 
+    font-weight: 400;
+    width: 2rem; 
+    height: 2rem;
+    border-radius: 100px;
+    margin-left: -1rem; 
+}.members .add-icon-logo { border-radius: 20px; margin-left: .5rem;}
+.profile-pic, .profile-pic img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    /* position: absolute; */
+    margin-right: .5rem;
+}
+
+
+.component-middle .messages-container {
+    /* background-color: red; */
+    height: calc(100% - 4rem);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    height: calc(100% - 1rem);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    padding: .5rem 1rem 1.5rem 1rem;
+}.message-row {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* padding-left: 2.5rem; */
+    padding: 0 8rem 0 2.5rem;
+    margin-top: .2rem;
+    font-weight: 300;
+    position: relative;
+}.messages .profile-pic {position: absolute;}
+.message-row .profile-pic {
+    /* position: absolute; */
+    left: 0;
+}.message-row .message {
+    background-color: #2c2e3d;
+    padding: .5rem;
+    border-radius: 5px;
+    font-size: .9rem;
+}.message-row.sender {
+    padding: 0  2.5rem 0 5rem;
+    justify-content: flex-end;
+}.message-row.sender .profile-pic {
+    visibility: hidden;
+    left: auto;
+    right: 0;
+    padding-left: .3rem;
+}.message-row.sender .message { background-color: #4183d7;}
+
+.write-message {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}.write-message .editable-content {
+    overflow: hidden;
+    min-height: 2rem;
+    max-height: 10rem;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border: 1px solid #2c3146;
+    outline: none;
+    padding: 1rem 8rem 1rem 1rem;
+    font-size: .9rem;
+}.editable-content:empty::before {
+    content: attr(data-placeholder);
+    color: #707070;
+    font-weight: 400;
+}.editable-content:focus::before {
+    content: none;
+}#write-message-attr {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: .5rem;
+    right: 3rem;
+    color: #999999;
+}#write-message-attr span {
+    font-size: 1.2rem;
+}
+#write-message-attr span:nth-child(2) {
+    margin: 0 .5rem;
+}span#write-send {
+    border-radius: 100px;
+    background-color: #3e85e3;
+    color: black;
+    padding: .7rem;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.component-right .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header #arrow-icon {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 1rem;
+    padding: 1rem;
+}#arrow-icon ion-icon:first-child { color: #505050; position: absolute;}
+#arrow-icon ion-icon:last-child { margin-left: .8rem; color: #999999;}
+.component-right .header > ion-icon { color: #999999; border-radius: 100px; background-color: #50505053; padding: 1.5rem; }
+.component-right .header div { margin-top: .5rem; display: flex;}
+.component-right .header div ion-icon { background-color: #50505053; color: #909090; border-radius: 100px; padding: .5rem; margin-left: 1rem;}
+
+
+.component-right { overflow: hidden; }
+.component-right .content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.component-right .content span { 
+    /* background-color: red;  */
+    color: #999999;
+    width: 100%; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0; 
+}
+
+.component-right .content span h1 {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.shared-images {
+    overflow-y: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 49% 49%;
+    column-gap: 2%;
+    row-gap: .2rem;
+    padding: .2rem;
+    position: relative;
+    min-height: 50%;
+}
+
+.item {
+    min-height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid #2c3146;
+    position: relative;
+}
+.item img {
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+}

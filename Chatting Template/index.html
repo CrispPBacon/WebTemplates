@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webchat.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Chat Design</title>
+</head>
+<body>
+    <div class="webchat">
+        <div class="components">
+            <section class="component-left">
+                <div class="header">
+                    <span class="logo"><img src="./asset/LOGO.png" alt="convo-logo" style="width: 6rem;"></span>
+                    <span class="search-bar">
+                        <ion-icon name="search-sharp" id="search-btn"></ion-icon>
+                        <input type="search" placeholder="Search user or chat" autocomplete="off">
+                        <ion-icon name="close" id="search-clear"></ion-icon>
+                    </span>
+                    <span id="newMessage">
+                        <span id="newMessageLabel">New<ion-icon name="ellipse" id="newMsesageSign"></ion-icon></span>                        
+                        <span id="newMessageCount">9</span>
+                    </span>
+                </div>
+                <div class="conversation-list ">
+                    <div class="profile">
+                        <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                        <div class="profile-details">
+                            <h1>Allan Soriano</h1>
+                            <p>Hello World...</p>
+                            <span>11m</span>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <span><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                        <div class="profile-details">
+                            <h1>Falco Fayas</h1>
+                            <p>Hello World...</p>
+                            <span>14m</span>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <span><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                        <div class="profile-details">
+                            <h1>Quonas Kilgor</h1>
+                            <p>Hello World...</p>
+                            <span>14m</span>
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <span><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                        <div class="profile-details">
+                            <h1>Klein Moretti</h1>
+                            <p>Hello World...</p>
+                            <span>14m</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <span><h1>People you may know</h1></span>
+                    <div class="people-you-may-know">
+                        <div class="profile">
+                            <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                            <div class="profile-details">
+                                <h1>swankymr@gmail.com</h1>
+                                <span class="add-icon-logo"><add-icon aria-disabled="false">+</add-icon></span>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <span><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                            <div class="profile-details">
+                                <h1>swankymr@gmail.com</h1>
+                                <span class="add-icon-logo"><add-icon aria-disabled="false">+</add-icon></span>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                            <div class="profile-details">
+                                <h1>swankymr@gmail.com</h1>
+                                <span class="add-icon-logo"><add-icon aria-disabled="false">+</add-icon></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="component-middle">
+                <div class="conversation-header">
+                    <div class="conversation-head group"> <!-- "single or group" -->
+                        <span class="profile-pic"><img src="./asset/profile.jfif" alt=""></span>
+                        <div class="members">
+                            <span class="profile-pic"><img src="./asset/profile.jfif" alt=""></span>
+                            <span class="profile-pic"><img src="./asset/profile.jfif" alt=""></span>
+                            <span class="profile-pic"><img src="./asset/profile.jfif" alt=""></span>
+                            <span class="profile-others-count">+3</span>
+                            <span class="add-icon-logo"><add-icon>+</add-icon></span>
+                        </div>
+                        <span><h1>Product Team</h1></span>
+                    </div>
+                </div>
+                <div class="messages-container">
+                    <div class="messages">
+                        <div class="message-row sender">
+                            <span class="profile-pic"><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                            <span class="message">Check out the images and size chart</span>
+                        </div>
+                        <br>
+                        <div class="message-row">
+                            <span class="profile-pic"><img src="./asset/profile.jfif" alt="PROFILE1"></span>
+                            <span class="message">Yes, the new H&M ladies dress is not shown anywhere on the website. Can you provide some images?</span>
+                        </div>
+                        <div class="message-row">
+                            <span class="message">I was just curious where can I find the female dresses?</span>
+                        </div>
+                    </div>
+                    <div class="write-message">
+                        <div autocomplete="off" id="editableDiv" contenteditable="true" class="editable-content" data-placeholder="Enter text here..."></div>
+                        <span id="write-message-attr">
+                            <span id="write-emoji"><ion-icon name="happy-outline"></ion-icon></span>
+                            <span id="write-attach"><ion-icon name="attach-outline" style="rotate: 45deg;"></ion-icon></span>
+                            <span id="write-send"><ion-icon name="send"></ion-icon></span>
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="component-right">
+                <div class="header">
+                    <span id="arrow-icon">
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </span>
+                    <ion-icon name="person"></ion-icon>
+                    <div>
+                        <span class="add-icon-logo"><add-icon aria-disabled="false">+</add-icon></span>
+                        <ion-icon name="settings"></ion-icon>
+                    </div>
+                </div>
+                <div class="content">
+                    <span><h1>SHARED FILES (14)</h1><ion-icon name="chevron-down"></ion-icon></span>
+                    <div class="shared-images">
+                        <span class="item"><img src="./asset/profile.jfif" alt="asdsa"></span>
+                        <span class="item"><img src="./asset/Instagram.jfif" alt="asdas"></span>
+                        <span class="item"><img src="./asset/download.jfif" alt="asdas"></span>
+                        <span class="item"><img src="./asset/Quotations.jfif" alt="asdas"></span>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
